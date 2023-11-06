@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import Products from "../Products/Products";
+import "./SearchBar.css"
 
 const SearchBar = () => {
 	const [searchValue, setSearchValue] = useState("")
@@ -7,9 +9,11 @@ const SearchBar = () => {
 	}
 
 	return (
-		<div>
+		<div id="searchbar">
 			<input type="text" value={searchValue} onChange={handleInput}/>
+			<Products search={searchValue}/>
 		</div>
+		
 	)
 }
 
